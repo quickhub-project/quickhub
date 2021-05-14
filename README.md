@@ -40,7 +40,7 @@ By restricting the data to a few predefined structures, the data can be perfectl
 
 In addition to services, QuickHub also manages devices and client-side access to them. (IoT) devices also log on to the server via the websocket interface and can then be registered in the system by an authorized user. This assigns the device a freely definable, unique address with which it can be addressed from that moment on.
 
-Thanks to the IDFix SDK, QuickHub devices can be easily implemented on the Espressif ESP8266 and ESP32 microcontrollers. The complete interface between server and microcontroller, as well as all relevant functions for provisioning are already fully provided by the QuickHub SDK for Espressif (IDFix).
+Thanks to the IDFix SDK, QuickHub devices can be easily implemented on the Espressif ESP8266 and ESP32 microcontrollers. The complete interface between server and microcontroller, as well as all relevant functions for provisioning are already fully provided by the QuickHub SDK for Espressif (IDFix). *IDFix is currently not open source but may be released soon.*
 
 # How do I get it to work?
 
