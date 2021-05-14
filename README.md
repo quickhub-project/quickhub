@@ -45,9 +45,9 @@ Thanks to the IDFix SDK, QuickHub devices can be easily implemented on the Espre
 
 Here is a simplified representation of the most important classes to illustrate the individual abstraction layers.
 
+![image](https://user-images.githubusercontent.com/51061627/118320428-87eac380-b4fc-11eb-9362-5158a462bbef.png)
 
 
-{{:extern:quickhub_resources_devices.png|}}
 
 ## Dependencies
 
