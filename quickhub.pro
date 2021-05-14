@@ -7,6 +7,6 @@
 TEMPLATE = subdirs
 CONFIG += ordered
 QMAKE_LFLAGS += -Wl,-rpath,"'$$ORIGIN'"
-SUBDIRS += qh_plugin_system/QHPluginSystem.pro \
-           qh_core_plugin/QHCore.pro \
+SUBDIRS += quickhub-pluginsystem/QHPluginSystem.pro \
+           quickhub-core/QHCore.pro \
            quickhub/main.pro

@@ -5,7 +5,7 @@
 # Copyright (C) 2021 by Friedemann Metzger - mail@friedemann-metzger.de
 
 TEMPLATE = app
-INCLUDEPATH += ../qh_plugin_system/src
+INCLUDEPATH += ../quickhub-pluginsystem/src
 LIBS += -lQHPluginSystem -L../bin/lib -ldl
 LIBS += -lQHCore -L../bin/plugins
 QT += core websockets qml

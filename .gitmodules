@@ -1,0 +1,6 @@
+[submodule "quickhub-pluginsystem"]
+	path = quickhub-pluginsystem
+	url = https://github.com/quickhub-project/quickhub-pluginsystem.git
+[submodule "quickhub-core"]
+	path = quickhub-core
+	url = https://github.com/quickhub-project/quickhub-core.git
