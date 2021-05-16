@@ -6,7 +6,7 @@ QuickHub is a toolkit or SDK that provides basic features of a typical IoT or cl
 The QuickHub framework consists of three core components:
 
   - The server application
-  - The client library for implementing user interfaces with Qt QML
+  - The client library for implementing user interfaces with Qt QML  ([Link to the repository](https://github.com/quickhub-project/quickhub-qmlclientmodule))
   - The embedded framework for rapid firmware development of QuickHub devices. Based on the Espressif SDKs for the ESP8266 and ESP32 respectively. 
 
 ## What are the advantages of QuickHub? 
@@ -22,7 +22,7 @@ Due to its resource-efficient implementation, QuickHub can also be encapsulated 
 
 ### Qt on the client side
 
-QML, as Qt's declarative UI description language, is well suited for implementing chic and contemporary graphical interfaces thanks to high-performance OpenGL rendering and simple syntax. Interfaces based on Qt QML can be executed on all relevant desktop and mobile platforms. This makes it possible to support all platforms from Windows, Linux, OSX to Android and iOS with a single code base. Since the generic QuickHub interface is already fully implemented in the form of a middleware in a QML module, one only needs to worry about the individual visualization of the data.  Everything else, from connection establishment to ready-made QAbstractItemModels is fully implemented by the QuickHub ClientLibrary for direct use from QML.
+QML, as Qt's declarative UI description language, is well suited for implementing chic and contemporary graphical interfaces thanks to high-performance OpenGL rendering and simple syntax. Interfaces based on Qt QML can be executed on all relevant desktop and mobile platforms. This makes it possible to support all platforms from Windows, Linux, OSX to Android and iOS with a single code base. Since the generic QuickHub interface is already fully implemented in the form of a middleware in a QML module, one only needs to worry about the individual visualization of the data.  Everything else, from connection establishment to ready-made QAbstractItemModels is fully implemented by the QuickHub ClientLibrary for direct use from QML. ([Link to the repository](https://github.com/quickhub-project/quickhub-qmlclientmodule))
 
 
 ### QuickHub as HMI middleware
