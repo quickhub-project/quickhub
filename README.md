@@ -32,7 +32,7 @@ If a srver-side plugin registers a service, it can be accessed through the WebSo
 
 By restricting the data to a few predefined structures, the data can be perfectly abstracted from the interface used.  In addition to the WebSocket interface provided by QuickHub by default, thanks to the modular architecture, plugins can be registered that allow access via alternative protocols and interfaces.  For example, there is also a ready-made QuickHub plugin that also provides the registered services via a REST-like HTTP API. The same would be conceivable for MQTT, Modbus, CAN or any other interfaces. The standard WebSocket-based interface provided by QuickHub is part of the core. It works seamlessly with the corresponding client library and ensures that changes to the resources of a service are synchronized with all clients in real time. The big advantage is that the developer of a service does not have to deal with protocol details and infrastructure development on either the server or client side, as QuickHub already provides this in full.  The infrastructure provided by QuickHub also includes user management with rights management, which can be used to ensure that only authorized users can access certain resources or services.
 
-## Commong use cases
+## Common use cases
 
 ### QuickHub as HMI middleware
 
@@ -44,11 +44,23 @@ This approach has many advantages:
 - Due to the use of QuickHub you are forced to strictly follow the rules of an MVC pattern in your software architecture design.
 
 
-### QuickHub as IoT Hub 
+### QuickHub as (IoT-) Device-Hub 
 
-In addition to services, QuickHub also manages devices and client-side access to them. (IoT) devices also log on to the server via the websocket interface and can then be registered in the system by an authorized user. This assigns the device a freely definable, unique address with which it can be addressed from that moment on.
+In addition to services, QuickHub also manages devices and client-side access to them. But what is a device? In the QuickHub context, a device consists of a unique DeviceID and a set of properties and RPCs. A Device does not necessarily have to be a physical hardware device. It can also be a virtual device that exists only on the software side.
+
+Devices log on to the server either via the websocket interface or via external plug-ins and can then be registered in the system by an authorized user. This gives the device a freely definable, unique address with which it can be addressed from this point on.
 
 Thanks to the IDFix SDK, QuickHub devices can be easily implemented on the Espressif ESP8266 and ESP32 microcontrollers. The complete interface between server and microcontroller, as well as all relevant functions for provisioning are already fully provided by the QuickHub SDK for Espressif (IDFix). *IDFix is currently not open source but may be released soon.*
+
+The QuickHub Device Gateway offers the following functionalities:
+
+- Connection management (detect and correctly handle disconnections).
+- Device Management with Authentication (Devices must be registered to a unique address to be accessible via QuickHub).
+- Property Shadowing (If a device is offline, property changes are cached until the device logs in again)
+- Property Confirmation (The server expects a confirmation for each property change. On the client side, this makes it immediately apparent whether a property change has been processed by a device or not.
+- Modularization via generalized interfaces, whereby the device concept can be extended as desired with the help of plug-ins.
+- Alternative interfaces extensible via plug-ins (e.g. CAN, Modbus, MQTT)
+
 
 # How do I get it to work?
 
