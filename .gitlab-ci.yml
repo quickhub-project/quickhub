@@ -18,4 +18,4 @@ build-master:
       --platform "$PLATFORM" --cache-from "$CI_IMAGE"
       --build-arg BUILDKIT_INLINE_CACHE=1 .
   only:
-    - master
+    - main
