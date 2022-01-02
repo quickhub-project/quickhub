@@ -1,4 +1,4 @@
-FROM frime/qtenv
+FROM frime/qtbuildenv
 
 #### BUILD 
 RUN mkdir /root/src
