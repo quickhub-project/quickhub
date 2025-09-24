@@ -32,7 +32,7 @@ void ResourceManager::addResourceFactory(IResourceFactory *factory)
 {
     qInfo()<<"Added Resource factory for: "+ factory->getResourceType()+ (factory->getDescriptorPrefix().isEmpty() ? " (default)" : "; descriptor: " + factory->getDescriptorPrefix());
     factory->setParent(this);
-    _resourceFactorys.insertMulti(factory->getResourceType(), factory);
+    _resourceFactorys.insert(factory->getResourceType(), factory);
 }
 
 resourcePtr ResourceManager::getOrCreateResource(QString type, QString descriptor, QString token, Err::CloudError *error)

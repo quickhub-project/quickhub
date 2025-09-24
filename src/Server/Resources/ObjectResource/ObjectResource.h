@@ -14,7 +14,6 @@
 #include <QReadWriteLock>
 
 #include "../ResourceManager/IResource.h"
-#include "../../Authentication/User.h"
 #include "ObjectResourceFactory.h"
 
 /*!
@@ -84,7 +83,7 @@ public:
     /*!
         Sets the value of a given property.
     */
-    virtual ModificationResult  setProperty(QString name, const QVariant &value, QString token);
+    virtual ModificationResult setProperty(QString name, const QVariant &value, QString token);
 
     /*!
       \fn bool ObjectResource::setFilter(QVariantMap query)

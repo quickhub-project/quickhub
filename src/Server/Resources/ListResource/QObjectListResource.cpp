@@ -85,6 +85,7 @@ QVariant QObjectListResource::getItem(int idx, QString uuid) const
 
 IResource::ModificationResult QObjectListResource::setProperty(QString property, QVariant data, int index, QString uuid, QString token)
 {
+    Q_UNUSED(uuid);
     ModificationResult result;
     if(!isPermittedToWrite(AuthenticationService::instance()->validateToken(token)))
     {

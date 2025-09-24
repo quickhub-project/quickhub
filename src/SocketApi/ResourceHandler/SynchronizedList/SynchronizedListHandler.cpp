@@ -355,7 +355,7 @@ void SynchronizedListHandler::propertySet(QString property, QVariant data, int i
     parameters["uuid"] =  uuid;
     parameters["index"] =  index;
     parameters["property"] =  property;
-    if(data.type() == QVariant::Map)
+    if (data.typeId() == QVariant::Map)
         parameters["data"] =  data.toMap()["data"].toMap()[property];
     else
         parameters["data"] = data;

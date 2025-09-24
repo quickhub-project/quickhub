@@ -113,6 +113,7 @@ int DeviceHandleListWrapper::getIndex(QString uuid) const
         return -1;
 
     QList<QString> keys = _devices.keys();
-    auto i = qBinaryFind(keys.begin(), keys.end(), uuid);
+    //auto i = qBinaryFind(keys.begin(), keys.end(), uuid);
+    const auto i = std::lower_bound(keys.begin(), keys.end(), uuid);
     return i - keys.begin();
 }

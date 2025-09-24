@@ -13,7 +13,8 @@ class ServiceHandlerFactory : public QObject
 {
     Q_OBJECT
 public:
-    explicit ServiceHandlerFactory(QObject *parent = nullptr);
+    explicit ServiceHandlerFactory(QObject *parent = nullptr)
+        : QObject(parent) {};
 
 signals:
 

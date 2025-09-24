@@ -40,7 +40,7 @@ private:
 
     IResourceFactory*                       getResourceFactory(QString type, QString descriptor) const;
     QMap<QString, QWeakPointer<IResource>>  _resources;
-    QMap<QString, IResourceFactory*>        _resourceFactorys;
+    QMultiMap<QString, IResourceFactory *> _resourceFactorys;
     mutable QReadWriteLock                  _resourceMutex;
 
 private slots:

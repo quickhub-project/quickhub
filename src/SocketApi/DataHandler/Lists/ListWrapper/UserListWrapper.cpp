@@ -69,9 +69,8 @@ int UserListWrapper::getIndex(QString uuid) const
     if(!_userVariants.contains(uuid))
         return -1;
 
-    QList<QString> keys = _userVariants.keys();
-    auto i = qBinaryFind(keys.begin(), keys.end(), uuid);
-    return i - keys.begin();
+    const auto keys = _userVariants.keys();
+    return std::lower_bound(keys.begin(), keys.end(), uuid) - keys.begin();
 }
 
 

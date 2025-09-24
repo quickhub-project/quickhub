@@ -45,7 +45,7 @@ bool ServiceRequestHandler::handleRequest(QVariantMap message, ISocket *socket)
     QString serviceName;
     serviceName = selectorTokens.first();
     QString call;
-    call = selector.right(selector.count() - serviceName.count() -1);
+    call = selector.right(selector.size() - serviceName.size() - 1);
 
     QString token           = message["token"].toString();
     QVariantMap payload     = message["payload"].toMap();
